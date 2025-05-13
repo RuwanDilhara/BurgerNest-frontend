@@ -8,23 +8,26 @@ import { ReportsComponent } from './components/reports/reports.component';
 
 export const routes: Routes = [
     {
+        path:'',redirectTo:'staff/orders' ,pathMatch:'full' ,
+    },
+    {
         path:"staff",
         component:StaffMainDashboardComponent,
         children:[
             {
-                path:"dashboard",
+                path:'dashboard',
                 component:StaffDashboardComponent
             },
             {
-                path:"store",
+                path:'store',
                 component:StoreComponent
             },
             {
-                path:"orders",
+                path:'orders',
                 component:OrdersComponent
             },
             {
-                path:"customers",
+                path:'customer',
                 component:CustomersComponent
             },
             {
